@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Sample #4</title>
+    <style type="text/css">
+        .container
+        {
+            width: 200px;
+        }
+        .header
+        {
+            border: solid 2px black;
+            cursor:pointer;
+        }
+        .body
+        {
+            border: solid 2px red;
+        }
+    </style>
+</head>
+<body>
+
+    <script type="text/javascript" language="javascript" src="jquery-1.4.min.js"></script>
+
+    <script type="text/javascript" language="javascript">
+        //$(function(){
+		$(document).ready
+		(
+		function()
+		{
+            $(".header").click(
+			function(){
+                $(".body").slideToggle('slow');//slow
+            });
+		});
+        //});
+		
+		
+		//$(".body").slideToggle('slow');
+    </script>
+
+    <div class="container">
+        <div class="header">
+            Click Here To Collapse
+        </div>
+        <div class="body">
+            Access a property on the first matched element. This method makes it easy to retrieve
+            a property value from the first matched element. If the element does not have an
+            attribute with such a name, undefined is returned.
+        </div>
+    </div>
+</body>
+</html>
