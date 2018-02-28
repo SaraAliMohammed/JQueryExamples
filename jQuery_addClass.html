@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> -- jQuey addClass & removeClass ---</title>
+   <script type="text/javascript" 
+   src="jquery-1.4.min.js"></script>
+   <script type="text/javascript" language="javascript">
+
+       function changeStyle() {
+			 //$("em").toggleClass("selected");
+			 //-------------------------------//
+           //var btnName = $("#btn").attr("name");
+           
+           //if (btnName == "apply") {
+		   if(!($("em").hasClass("selected"))){
+               $("em").addClass("selected");                             
+               //$("#btn").attr("name", "remove");
+           }
+
+           else {
+               $("em").removeClass("selected");              
+               //$("#btn").attr("name", "apply");
+           }
+		   
+		   
+		   //$("em").toggleClass("selected");
+       }
+
+
+   </script>
+   
+   <style>
+      .selected { color:red;  background:yellow;}
+      /*.highlight { background:yellow; }*/
+  </style>
+</head>
+<body>
+   <em>This is first paragraph.</em>
+   <hr />
+   <p id="myid">This is second paragraph.</p>
+   <br />
+   <input id="btn" name="apply" type="button" value="change Style" onclick = "changeStyle()" />
+</body>
+</html>
