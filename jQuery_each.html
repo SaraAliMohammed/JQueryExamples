@@ -1,0 +1,32 @@
+<html>
+<head>
+  <style>
+  div { color:blue; }
+  div#five { color:red; }
+  </style>
+  <script src="jquery-1.4.min.js"></script>
+</head>
+<body>
+    <div id="one"></div>
+  <div id="two"></div>
+
+  <div id="three"></div>
+  <div id="four"></div>
+  <div id="five"></div>
+<script>
+    var arr = [ "one", "two", "three", "four", "five" ];
+    var obj = { one:1, two:2, three:3, four:4, five:5 };
+
+    jQuery.each(arr, function() {
+      $("#" + this).text("My id is " + this + ".");
+      return (this !== "four"); // will stop running to skip "five"
+
+    });
+
+    jQuery.each(obj, function(i, val) {
+        alert(i + " and " + val);
+        $("#" + i).append(document.createTextNode(" - " + val));
+    });
+</script>
+</body>
+</html>
