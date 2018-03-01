@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>--- jQuery Fade ---</title>
+   <script type="text/javascript" 
+   src="jquery-1.4.min.js"></script>
+   <script type="text/javascript" language="javascript">
+   
+    $(document).ready(function() {
+
+      $("#in").click(function(){
+         $(".target").fadeIn( 3000, function(){ 
+            $(".log").html('<b>Fade In Transition Complete</b>');
+			//alert ("transition completed");
+          });
+      });
+
+	  
+	  
+      $("#out").click(function(){
+         $(".target").fadeOut(3000);
+		 //alert ("transition completed");
+      });
+	  
+
+   });
+   </script>
+   <style>
+      p {
+           background-color:#bca;
+           width:200px; 
+           border:1px solid green; 
+        }
+  </style>
+</head>
+<body>
+
+   <p>Click on any of the buttons</p>
+   <button id="out"> Fade Out </button>
+   <button id="in"> Fade In</button> 
+   <div class="target">
+      <img src="prototype.png" alt="jQuery" />
+   </div>
+   <div class="log"></div>
+  
+</body>
+</html>
