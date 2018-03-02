@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>--- jQuery Text & HTML ---</title>
+<script type="text/javascript" src="jquery-1.4.min.js">
+</script>
+   
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function() {
+        alert("See the difference!");
+        var content = $("p#pid1").text();
+        $("p#pid2").html(content);
+    });
+
+</script>
+<style>
+  .red { color:red; }
+  .green { color:green; }
+</style>
+
+</head>
+<body>
+
+<p class="green" id="pid1">This is <i>first paragraph</i>.</p>
+<p class="red" id="pid2">This is second paragraph.</p>
+
+</body>
+</html>
