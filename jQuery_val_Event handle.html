@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>--- jQuery val() --- </title>
+<script type="text/javascript" src="jquery-1.4.min.js">
+</script>
+   
+   
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function(){
+		$("#bb").click(function(){
+			var content = $("input").val();
+			$("input#in2").val(content);
+			$("p#pid2").text(content);
+		});
+	});
+
+
+
+</script>
+<style>
+  .red { color:red; }
+  .green { color:green; }
+</style>
+
+</head>
+<body>
+
+<input type="text" value="First Input Box"/>
+<input type="text" id="in2" value="Second Input Box"/>
+<input type="button" id="bb" value="test"/>
+<p class="green" id="pid1">This is <i>first paragraph</i>.</p>
+<p class="red" id="pid2">test.</p>
+
+</body>
+
+</html>
