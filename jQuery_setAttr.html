@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>--- jQuery Setting Attribute Values ---</title>
+   <script type="text/javascript" 
+   src="jquery-1.4.min.js"></script>
+   <script type="text/javascript" language="javascript">
+
+       function changeImg() {
+           var btnVal = $("#btn").attr("value");
+           if (btnVal == "jQuery") {
+               $("#myimg").attr("src", "jQuery.gif");
+               $("#btn").attr("value", "ProtoType");
+           }
+
+           else {
+               $("#myimg").attr("src", "prototype.png");
+               $("#btn").attr("value", "jQuery");
+           }
+       }
+
+
+   </script>
+</head>
+<body>
+   <div>
+      <img id="myimg" src="prototype.png" alt="Sample image" />
+   </div>
+   <input id="btn" type = "button" value = "jQuery" onclick="changeImg()"/>
+</body>
+</html>
