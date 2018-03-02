@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function(){
+        var myDialog=$("#d1").dialog({
+            modal:true,
+            autoOpen:false,
+            buttons:{
+                OK:function(){
+                        myDialog.dialog("close");
+                        $("#welcome").text("Welcome: " + $("#user").val())
+                    },
+                Cancel:function(){
+                        myDialog.dialog("close");
+                    }
+            }
+        });
+
+        $("#openDialog").click(function(){
+            myDialog.dialog("open");
+        });
+
+    });
+
+
+
+</script>
+</head>
+<body>
+    <button id="openDialog">open dialog</button>
+    <div id="d1">
+        <input id="user" type="text" placeholder="User name"><br>
+        
+    </div>
+
+    <div id="welcome"></div>
+
+</body>
+</html>
