@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>--- jQuery SlideDown---</title>
+   <script type="text/javascript" 
+   src="jquery-1.4.min.js"></script>
+   <script type="text/javascript" language="javascript">
+   
+    $(document).ready(function() {
+
+      $("#hide").click(function(){
+         $(".target").hide( 3000, function(){ 
+             alert("hide completed");
+          });
+      });
+
+      $("#show").click(function(){
+         $(".target").show( 3000, function(){ 
+             alert("show completed");
+          });
+      });
+
+   });
+   </script>
+   <style>
+      p {
+           background-color:#bca;
+           width:200px; 
+           border:1px solid green; 
+        }
+  </style>
+</head>
+<body>
+
+   <p>Click on any of the buttons</p>
+   <button id="hide"> hide </button>
+   <button id="show"> show </button> 
+
+   <div class="target">
+      <img src="jQuery.gif" alt="jQuery" />
+   </div>
+   <div class="log"></div>
+  
+</body>
+</html>
