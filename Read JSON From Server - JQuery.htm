@@ -1,0 +1,37 @@
+﻿<html>
+<head>
+	<title>JSON With AJAX from Web API</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+		function getProduct()
+		{
+			var prodID=$("#pID").val();
+			var url="https://reqres.in/api/products/" +prodID;
+			$.getJSON(url, function(result){
+				displayProduct(result);
+			});
+			
+		}
+
+		function displayProduct(p)
+		{
+			//var jsonData=JSON.parse(p);
+			var jsonData=p;
+			var prod=jsonData.data;
+			var str="<br>Product ID: " + prod.id
+			       +"<br>Product Name: " + prod.name
+				   +"<br>Production year: " + prod.year
+				   +"<br>Product Color: " + (prod.color).fontcolor(prod.color);
+				   
+			$("#prod").html(str);
+			
+		}
+    </script>
+</head>
+<body>
+	<input type="text" id="pID">
+<input type="button" id="button2" onclick="getProduct()" value="show product" />
+<div id="prod"></div>
+
+</body>
+</html>
