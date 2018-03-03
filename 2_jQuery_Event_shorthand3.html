@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+   
+    <script src="Scripts/jquery-1.10.1.min.js"></script>
+    <script>
+
+        $(function () {
+            $('img').click(function () {
+                //this.width = 300;
+                $(this).width('+=30px');
+            });
+
+            
+
+            //$('img').mouseover(function () {
+
+            //    $(this).height('+=30px');
+            //});
+            //$('img').mouseout(function () {
+
+            //    $(this).height('-=30px');
+            //});
+
+            $('img').hover(function () {
+                $(this).height('+=30px');
+            }, function () {
+                $(this).height('-=30px');
+            });
+
+            
+
+        });
+    </script>
+</head>
+<body>
+    <img src="images/18.jpg" width="200" height="200" />
+
+    <img src="images/13.jpg" width="200" height="200" />
+
+   
+</body>
+</html>
