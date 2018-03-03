@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="Scripts/jquery-1.10.1.min.js"></script>
+    <style>
+        .c1 {
+            width: 300px;
+            height: 250px;
+            border: 2px red solid;
+        }
+    </style>
+
+    <script>
+
+        $(function () {
+
+            var inp = $('<img src="images/13.jpg" height="150px" width="200px"/>');//<input type="text" value="my text"/>');
+            $('#app').click(function (e) {
+                // e.preventDefault();
+                $('.c1').append($('<input type="text" value="my text"/>'));
+               // $('.c1').append(inp);
+            })
+
+            $('#pre').click(function (e) {
+                //e.preventDefault();
+                $('.c1').prepend(inp);
+            })
+
+            $('#appto').click(function (e) {
+                //e.preventDefault();
+                inp.appendTo('.c1');
+
+            })
+            $('#preto').click(function (e) {
+                //e.preventDefault();
+                inp.prependTo('.c1');
+
+            })
+
+            $('#after').click(function (e) {
+
+                // e.preventDefault();
+                $('ul li:eq(3)').after($("<li>New Item</li>"))
+                $('.c1').after(inp)
+
+            })
+
+            $('#before').click(function (e) {
+                // e.preventDefault();//If this method is called, the default action of the event will not be triggered
+                $('.c1').before(inp);
+
+            });
+
+            $('#remov').click(function (e) {
+                // e.preventDefault();
+                $('.c1 #btn').remove();
+
+            })
+
+            $('#emp').click(function (e) {
+                e.preventDefault();
+                $('.c1').empty();
+
+            })
+            //$('#alr').click(function (e) {
+            //    e.preventDefault();
+            //    alert($('.c1')[0]);
+
+            //})
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <div class="c1">
+        <br />
+        <button id="btn">Default element</button>
+        <br />
+    </div>
+    <br /><br /><br />
+    <button id="app">Append</button>
+    <button id="pre">prepend</button>
+    <button id="appto">Append to</button>
+    <button id="preto">prepend to</button>
+    <br /><br /><br />
+    <button id="remov">Remove div</button>
+    <button id="emp">Empty Div</button>
+    <!--<button id="alr">alert Div</button>-->
+    <br /><br /><br />
+    <button id="after">After</button>
+    <button id="before">Before</button>
+    <br /><br /><br />
+    <ul>
+        <li>Item 0</li>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+
+    </ul>
+
+</body>
+</html>
+
+
