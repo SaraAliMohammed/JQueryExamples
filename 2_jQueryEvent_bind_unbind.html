@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="Scripts/jquery-1.10.1.min.js"></script>
+    <script>
+
+        $(function () {
+
+            $('#btn').bind('click mouseover', function (e) {
+                alert(e.type)
+                alert("mouseover & click event are Binded via .bind() Method")
+            });
+
+            $('#unb').click(function () {
+
+                $('#btn').unbind('mouseover');
+
+            })
+
+            $('#btn').bind('click', function (e) {
+                alert("First Click")
+            });
+
+           // $('#btn').unbind();
+
+            $('#btn').bind('click', function (e) {
+                alert("Second Click")
+            });
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <button id="btn">OK</button>
+
+    <button id="unb">Un Bind</button>
+
+</body>
+</html>
