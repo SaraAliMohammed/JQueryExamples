@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/jquery-ui-1.8.18.custom.css"></style>
+		<style>
+
+
+	::-webkit-scrollbar{    width: 14px;
+}          
+    ::-moz-scrollbar{    width: 14px;
+}          
+::-webkit-scrollbar-button {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border:1px solid #666666;
+    width: 14px;
+    height: 14px;
+}
+::-webkit-scrollbar-button:vertical:decrement 
+{
+    background: url(../../ExtJS/ext-4.0.7/resources/themes/images/default/tools/tools-sprites-trans.gif) no-repeat -2px -62px;
+}
+::-webkit-scrollbar-button:vertical:increment 
+{
+    background: url(../../ExtJS/ext-4.0.7/resources/themes/images/default/tools/tools-sprites-trans.gif) no-repeat -2px -77px;
+}
+::-webkit-scrollbar-button:horizontal:decrement 
+{
+    background: url(../../ExtJS/ext-4.0.7/resources/themes/images/default/tools/tools-sprites-trans.gif) no-repeat -2px -105px;
+}
+::-webkit-scrollbar-button:horizontal:increment 
+{
+    background: url(../../ExtJS/ext-4.0.7/resources/themes/images/default/tools/tools-sprites-trans.gif) no-repeat -2px -120px;
+}
+
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-border-radius:4px;
+    background-color:#999;
+    border: 1px solid #fff;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color:#BBB;
+}
+		.demo
+		{
+			display:none;
+		
+		}
+
+		    #dd {
+		    
+                width:300px;
+                height:350px;
+                border:5px inset red;
+                overflow:scroll;
+            }
+		</style>
+		
+        <script src="Scripts/jquery-2.1.0.min.js"></script>
+        <script src="Scripts/jquery-ui-1.10.4.min.js"></script>
+		<script>
+			$(function(){
+				$("#di").click(function(){
+				    $(".demo").dialog({
+				        //modal: true,
+				        buttons: {
+				            'Ok': function () {
+				                alert('Hi' + $('#wel').val());
+				               
+				            }
+				        }
+				    });
+				
+				
+				})
+			});
+		
+		
+		</script>
+	</head>
+	
+	<body>
+	<button id="di">Ok</button>
+		<div class="demo">
+
+            Welcome
+            <input id="wel" type="text"/>
+        </div>
+
+    
+	</body>
+</html>
