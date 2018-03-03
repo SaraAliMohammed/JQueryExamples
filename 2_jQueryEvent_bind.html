@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <title></title>
+
+    <script src="Scripts/jquery-1.10.1.min.js"></script>
+    <script>
+
+        $(function () {
+
+            function clickHandler(e) {
+                alert("click event has been handled");
+            }
+
+            $('#btn').bind('click', clickHandler)
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <button id="btn">OK</button>
+
+</body>
+</html>
