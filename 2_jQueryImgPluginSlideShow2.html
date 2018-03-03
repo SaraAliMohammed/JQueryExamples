@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Image SlideShow Using Cycle2</title>
+    <style>
+        #slideshow {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            height: 500px;
+            width: 700px;
+        }
+
+            #slideshow img {
+                height: 500px;
+                width: 700px;
+            }
+    </style>
+    <script src="Scripts/jquery-2.1.0.js"></script>
+    <script src="Scripts/jquery.cycle2.min.js"></script>
+</head>
+<body>
+    <div id="slideshow" class="cycle-slideshow"
+         data-cycle-fx="scrollHorz" data-cycle-speed="1520" >
+        <!-- data-cycle-fx="fadeout"
+
+        data-cycle-speed=1500
+        data-cycle-timeout=4000
+            data-cycle-next="#next"
+
+           -->
+
+        <img src="images/5.jpg" />
+        <img src="images/6.jpg" />
+        <img src="images/7.jpg" />
+        <img src="images/8.jpg" />
+        <img src="images/9.jpg" />
+    </div>
+
+</body>
+</html>
