@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        #container {
+            width: 300px;
+            height: 300px;
+            border: red 2px solid;
+        }
+    </style>
+    <title></title>
+    <script src="Scripts/jquery-1.10.1.min.js"></script>
+    <script>
+
+        $(function () {
+
+            $('#container').delegate('button', 'click', function (e) {
+               // e.preventDefault();
+                alert("click event");
+               // $('#container').undelegate('button', 'click')
+            })
+            // $('#container').undelegate('button', 'click')
+            $('#append').bind('click', function (e) {
+                // e.preventDefault();
+                $('#container').append('<button>New Button</button>')
+            })
+        });
+
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <button>Default </button>
+    </div>
+
+    <button id="append">Append new button </button>
+</body>
+</html>
