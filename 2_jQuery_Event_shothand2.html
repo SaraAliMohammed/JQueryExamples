@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .c1 {
+            width: 300px;
+            height: 300px;
+            border: 2px red solid;
+        }
+
+        .c2 {
+            position: relative;
+            float: left;
+        }
+    </style>
+    <script src="Scripts/jquery-1.10.1.min.js"></script>
+    <script>
+
+        $(function () {
+           
+
+            $('.c1').mousemove(function (e) {
+
+                $('#s1').text('X : ' + e.pageX + ' Y: ' + e.pageY);
+            });
+
+
+
+            $(document).keyup(function (evt) {
+                alert(evt.keyCode);
+
+            });
+
+           
+        });
+    </script>
+</head>
+<body>
+    <input type="text" />
+    <br /><br />
+    <div class="c1">
+        <img src="images/12.jpg" width="300" height="300" />
+    </div>
+    <span id="s1"></span>
+    
+</body>
+</html>
