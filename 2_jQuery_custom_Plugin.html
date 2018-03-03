@@ -1,0 +1,45 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.10.1.min.js"></script>
+    <script>
+        $.fn.inputsHighlight = function () {
+
+            $(this).focus(function () {
+
+                $(this).css({ 'background-color': 'yellow', 'border': '1px inset gray' })
+            })
+
+            $(this).blur(function () {
+
+                $(this).css({ 'background-color': 'white', 'border': '1px inset black' })
+            })
+
+
+
+        }
+
+    </script>
+    <script>
+        $(function () {
+            //$('#dd input').css()
+            $('#dd input').inputsHighlight();
+
+        });
+    </script>
+</head>
+<body>
+    <div id="dd">
+        <input type="text" /><br />
+        <input type="text" /><br />
+        <input type="text" /><br />
+        <input type="text" /><br />
+        <input type="text" /><br />
+        <input type="text" /><br />
+    </div>
+</body>
+</html>
